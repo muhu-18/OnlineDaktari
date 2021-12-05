@@ -7,40 +7,37 @@ class User{
         $this->db = new Database;
     }
 
- 
-    public function getUsers(){
-        $this->db->query("SELECT * FROM users");
-
-        $result = $this->db->resultSet();
-
-        return $result;
+    public function register($data)
+    {
+        var_dump($data);
+        $this->db->query('INSERT INTO users (firstName, lastName, email, password, userType) VALUES(:firstName, :lastName, :email, :password, :userType)');
+       //Bind values
+        $this->db->bind(':firstName', $data['firstName']);
+        $this->db->bind(':lastName', $data['lastName']);
+        $this->db->bind(':email', $data['email']);
+        $this->db->bind(':password', $data['password']);
+        $this->db->bind(':userType', $data['userType']);
+        //execute the function
+        if($this->db->execute()){
+            return true;
+        }else{
+            return false;
+        }
     }
+    //Find user email
+    public function findUserEmail($email)
+    {
+        //Prepared statement
+        $this->db->query('SELECT * FROM users WHERE $email = :email LIMIT 1');
 
-    public function insertUsers(){
-        $this->db->query("INSERT INTO users VALUES('user_name', 'user_email', 'password')");
+        //bind email param
+        $this->db->bind(':email', $email);
 
-        $result = $this->db->resultSet();
-
-        return $result;
+        //Check if email is already registered
+        if ($this->db->rowCount() > 0){
+            return true;
+        }else{
+            return false;
+        }
     }
-
-    public function updateUsers(){
-        $this->db->query("UPDATE users SET user_name = 'Tiberius' WHERE user_id = 1");
-
-        $result = $this->db->resultSet();
-
-        return $result;
-    }
-
-
-    public function deleteUsers(){
-        $this->db->query("DELETE FROM users WHERE user_id = 1");
-
-        $result = $this->db->resultSet();
-
-        return $result;
-    }
-
-
-   
 }
