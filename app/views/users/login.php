@@ -2,11 +2,7 @@
     require APPROOT.'/views/includes/header.php';
 ?>
 
-<div>
-    <?php
-    require APPROOT.'/views/includes/navigation.php';
-    ?>
-</div>
+
 
 <!doctype html>
 <html lang="en">
@@ -43,7 +39,7 @@
             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email">
             <label for="floatingInput">Email address *</label>
             <span class="bg bg-warning">
-                 <?php echo $data['usernameError']; ?>
+                 <?php echo $data['emailError']; ?>
             </span>
         </div>
         <div class="form-floating">

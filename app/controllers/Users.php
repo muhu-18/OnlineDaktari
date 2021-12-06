@@ -113,11 +113,67 @@ class Users extends Controller
     {
         $data = [
             'title' => 'Login Page',
-            'usernameError' => '',
+            'email' => '',
+            'password' => '',
+            'emailError' => '',
             'passwordError' => ''
         ];
 
+        // Check for post
+        if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+            //Sanitize the post data
+            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
+            $data = [
+                'email' => trim($_POST['email']),
+                'password' => trim($_POST['password']),
+                'emailError' => '',
+                'passwordError' => ''
+            ];
+
+            //Validate email
+            if (empty($data['email'])){
+                $data['emailError'] = 'Please enter your email.';
+            }
+            //Validate password
+            if(empty($data['password'])){
+                $data['passwordError'] = 'Please enter a password.';
+            }
+
+            //Check if there are no errors
+            if (empty($data['emailError']) && empty($data['passwordError'])){
+                $loggedInUser = $this->userModel->login($data['email'], $data['password']);
+                if ($loggedInUser){
+                    $this->createUserSession($loggedInUser);
+                }else{
+                    $data['passwordError'] = 'Password or email is incorrect. Please try again.';
+                    $this->view('users/login', $data);
+                }
+            }
+        }else{
+            $data = [
+                'email' => '',
+                'password' => '',
+                'emailError' => '',
+                'passwordError' => ''
+            ];
+        }
         $this->view('users/login', $data);
     }
+
+    public function createUserSession($user) {
+        $_SESSION['user_id'] = $user->id;
+        $_SESSION['email'] = $user->email;
+        $_SESSION['firstName'] = $user->firstName;
+        var_dump($user->id);
+        header('location:' . URLROOT . '/pages/index');
+    }
+
+    public function logout() {
+        unset($_SESSION['user_id']);
+        unset($_SESSION['email']);
+        unset($_SESSION['firstName']);
+        header('location:' . URLROOT . '/users/login');
+    }
+
 }

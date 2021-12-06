@@ -9,7 +9,6 @@ class User{
 
     public function register($data)
     {
-        var_dump($data);
         $this->db->query('INSERT INTO users (firstName, lastName, email, password, userType) VALUES(:firstName, :lastName, :email, :password, :userType)');
        //Bind values
         $this->db->bind(':firstName', $data['firstName']);
@@ -24,6 +23,24 @@ class User{
             return false;
         }
     }
+
+    public function login($email, $password) {
+        $this->db->query('SELECT * FROM users WHERE email = :email');
+
+        //Bind value
+        $this->db->bind(':email', $email);
+
+        $row = $this->db->single();
+
+        $hashedPassword = $row->password;
+
+        if (password_verify($password, $hashedPassword)) {
+            return $row;
+        } else {
+            return false;
+        }
+    }
+
     //Find user email
     public function findUserEmail($email)
     {
