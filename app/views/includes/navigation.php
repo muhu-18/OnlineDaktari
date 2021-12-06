@@ -31,10 +31,15 @@
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="<?php echo URLROOT; ?>/users/settings">Settings</a></li>
           </ul>
-        </li>  
-        <li class="nav-item btn-logout">
-          <a class="nav-link" href="<?php echo URLROOT; ?>/users/login">Login</a>
-        </li>      
+        </li>
+          <li class="nav-item btn-login">
+              <?php if(isset($_SESSION['user_id'])) : ?>
+                  <a class="nav-link" href="<?php echo URLROOT; ?>/users/logout">Log out</a>
+              <?php else : ?>
+                  <a class="nav-link" href="<?php echo URLROOT; ?>/users/login">Login</a>
+              <?php endif; ?>
+          </li>
+
       </ul>
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
