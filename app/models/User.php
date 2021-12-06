@@ -7,40 +7,54 @@ class User{
         $this->db = new Database;
     }
 
- 
-    public function getUsers(){
-        $this->db->query("SELECT * FROM users");
-
-        $result = $this->db->resultSet();
-
-        return $result;
+    public function register($data)
+    {
+        $this->db->query('INSERT INTO users (firstName, lastName, email, password, userType) VALUES(:firstName, :lastName, :email, :password, :userType)');
+       //Bind values
+        $this->db->bind(':firstName', $data['firstName']);
+        $this->db->bind(':lastName', $data['lastName']);
+        $this->db->bind(':email', $data['email']);
+        $this->db->bind(':password', $data['password']);
+        $this->db->bind(':userType', $data['userType']);
+        //execute the function
+        if($this->db->execute()){
+            return true;
+        }else{
+            return false;
+        }
     }
 
-    public function insertUsers(){
-        $this->db->query("INSERT INTO users VALUES('user_name', 'user_email', 'password')");
+    public function login($email, $password) {
+        $this->db->query('SELECT * FROM users WHERE email = :email');
 
-        $result = $this->db->resultSet();
+        //Bind value
+        $this->db->bind(':email', $email);
 
-        return $result;
+        $row = $this->db->single();
+
+        $hashedPassword = $row->password;
+
+        if (password_verify($password, $hashedPassword)) {
+            return $row;
+        } else {
+            return false;
+        }
     }
 
-    public function updateUsers(){
-        $this->db->query("UPDATE users SET user_name = 'Tiberius' WHERE user_id = 1");
+    //Find user email
+    public function findUserEmail($email)
+    {
+        //Prepared statement
+        $this->db->query('SELECT * FROM users WHERE $email = :email LIMIT 1');
 
-        $result = $this->db->resultSet();
+        //bind email param
+        $this->db->bind(':email', $email);
 
-        return $result;
+        //Check if email is already registered
+        if ($this->db->rowCount() > 0){
+            return true;
+        }else{
+            return false;
+        }
     }
-
-
-    public function deleteUsers(){
-        $this->db->query("DELETE FROM users WHERE user_id = 1");
-
-        $result = $this->db->resultSet();
-
-        return $result;
-    }
-
-
-   
 }
