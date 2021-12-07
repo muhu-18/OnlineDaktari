@@ -3,38 +3,16 @@
 ?>
 
 
-
-<!doctype html>
-<html lang="en">
-<head>
-
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-    </style>
-
-
     <!-- Custom styles for this template -->
-    <link href="signin.css" rel="stylesheet">
-</head>
-<body class="text-center">
+    <link href=" <?php echo URLROOT ?>/css/signin.css" rel="stylesheet">
 
-<main class="form-signin container">
+<body class="text-center container">
+
+<main class="form-signin w-md-100">
     <form action="<?php echo URLROOT; ?>/users/login" method="POST">
         <img class="mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
         <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-
+        <small class="text-warning">Fields marked with * are required.</small>
         <div class="form-floating">
             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email">
             <label for="floatingInput">Email address *</label>
@@ -64,5 +42,4 @@
 
 
 </body>
-</html>
 

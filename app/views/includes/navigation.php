@@ -9,6 +9,7 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="<?php echo URLROOT; ?>/pages/index">Home</a>
         </li>
+          <?php if(isset($_SESSION['user_id'])) : ?>
         <li class="nav-item">
           <a class="nav-link" href="<?php echo URLROOT; ?>/pages/profile">Profile</a>
         </li>
@@ -32,6 +33,7 @@
             <li><a class="dropdown-item" href="<?php echo URLROOT; ?>/users/settings">Settings</a></li>
           </ul>
         </li>
+          <?php endif; ?>
           <li class="nav-item btn-login">
               <?php if(isset($_SESSION['user_id'])) : ?>
                   <a class="nav-link" href="<?php echo URLROOT; ?>/users/logout">Log out</a>
