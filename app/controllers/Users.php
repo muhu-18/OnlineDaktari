@@ -38,7 +38,6 @@ class Users extends Controller
                 'password' => trim($_POST['password']),
                 'confirmPassword' => trim($_POST['confirmPassword']),
                 'userType' => trim($_POST['userType']),
-                'usernameError' => '',
                 'firstNameError' => '',
                 'lastNameError' => '',
                 'emailError' => '',
@@ -57,17 +56,17 @@ class Users extends Controller
             }
 
             //validate second name on letters/numbers
-            if (empty($data['secondName'])){
-                $data['secondNameError'] = 'Please enter second name.';
-            }elseif (!preg_match($nameValidation, $data['secondName'])){
-                $data['secondNameError'] = 'Name can only contain letters and numbers.';
+            if (empty($data['lastName'])){
+                $data['lastNameError'] = 'Please enter last name.';
+            }elseif (!preg_match($nameValidation, $data['lastName'])){
+                $data['lastNameError'] = 'Name can only contain letters and numbers.';
             }
 
             //validate email
             if (empty($data['email'])){
                 $data['emailError'] = 'Please enter email.';
             }elseif (!filter_var($data['email'],    FILTER_VALIDATE_EMAIL)){
-                $data['emailError'] = 'Please enter the correct format.';
+                $data['emailError'] = 'Please enter the correct email format.';
             }else{
                 //Check if email exists
                 if ($this->userModel->findUserEmail($data['email'])){
