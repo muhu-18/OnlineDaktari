@@ -5,11 +5,7 @@
 require APPROOT.'/views/includes/header.php';
 ?>
 
-<div>
-    <?php
-    require APPROOT.'/views/includes/navigation.php';
-    ?>
-</div>
+
 
 <!doctype html>
 <html lang="en">
@@ -43,6 +39,7 @@ require APPROOT.'/views/includes/header.php';
     <form  action="<?php echo URLROOT; ?>/users/register" method="POST">
         <img class="mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
         <h1 class="h3 mb-3 fw-normal">Please sign up</h1>
+        <small class="text-warning">Fields marked with * are required.</small>
 
         <div class="form-floating">
             <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="firstName">
@@ -97,6 +94,7 @@ require APPROOT.'/views/includes/header.php';
                 <?php echo $data['userTypeError']; ?>
             </span>
         </div>
+
         <button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
         <p class="mt-3">Have an account?<a href="<?php echo URLROOT;?>/users/login" > Login!</a></p>
         <p class="mt-5 mb-3 text-muted">&copy; <?php echo date('Y')?></p>
