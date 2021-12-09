@@ -41,7 +41,6 @@
                   <a class="nav-link" href="<?php echo URLROOT; ?>/users/login">Login</a>
               <?php endif; ?>
           </li>
-
       </ul>
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

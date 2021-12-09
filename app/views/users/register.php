@@ -100,9 +100,6 @@ require APPROOT.'/views/includes/header.php';
         <p class="mt-5 mb-3 text-muted">&copy; <?php echo date('Y')?></p>
     </form>
 </main>
-
-
-
 </body>
 </html>
 
