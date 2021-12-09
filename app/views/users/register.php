@@ -103,9 +103,6 @@ require APPROOT.'/views/includes/header.php';
 </div>
     </form>
 </main>
-
-
-
 </body>
 </html>
 
