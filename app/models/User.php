@@ -45,16 +45,16 @@ class User{
     public function findUserEmail($email)
     {
         //Prepared statement
-        $this->db->query('SELECT * FROM users WHERE $email = :email LIMIT 1');
+        $this->db->query('SELECT * FROM users WHERE $email = :email');
 
         //bind email param
         $this->db->bind(':email', $email);
 
         //Check if email is already registered
         if ($this->db->rowCount() > 0){
-            return true;
-        }else{
             return false;
+        }else{
+            return true;
         }
     }
 }
