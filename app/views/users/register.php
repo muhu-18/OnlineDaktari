@@ -1,7 +1,4 @@
 <?php
-?>
-
-<?php
 require APPROOT.'/views/includes/header.php';
 ?>
 
@@ -23,8 +20,9 @@ require APPROOT.'/views/includes/header.php';
         }
 
         @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
+            .bd-placeholder-img-lg  {
                 font-size: 3.5rem;
+                
             }
         }
     </style>
@@ -37,9 +35,10 @@ require APPROOT.'/views/includes/header.php';
 
 <main class="form-signin container">
     <form  action="<?php echo URLROOT; ?>/users/register" method="POST">
-        <img class="mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-        <h1 class="h3 mb-3 fw-normal">Please sign up</h1>
+        <img class="mb-4" src="" alt="Online daktari" width="72" height="57">
+        <h1 class="h3 mb-3 fw-normal"> Registration </h1>
         <small class="text-warning">Fields marked with * are required.</small>
+       
 
         <div class="form-floating">
             <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="firstName">
@@ -57,10 +56,10 @@ require APPROOT.'/views/includes/header.php';
             </span>
         </div>
 
-
         <div class="form-floating">
             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email">
             <label for="floatingInput">Email address *</label>
+            <form class="form-floating">
             <span class="bg bg-warning">
                  <?php echo $data['emailError']; ?>
             </span>
@@ -80,24 +79,28 @@ require APPROOT.'/views/includes/header.php';
                 <?php echo $data['confirmPasswordError']; ?>
             </span>
         </div>
-
-        <div class="btn-group mt-1 mb-1" role="group" aria-label="Basic radio toggle button group">
-            <input type="radio" class="btn-check" name="userType" id="btnradio1" autocomplete="off" checked value="Patient">
-            <label class="btn btn-outline-primary" for="btnradio1">Patient</label>
-
-            <input type="radio" class="btn-check" name="userType" id="btnradio2" autocomplete="off" value="Doctor">
-            <label class="btn btn-outline-primary" for="btnradio2">Doctor</label>
-
-<!--            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">-->
-<!--            <label class="btn btn-outline-primary" for="btnradio3">Admin</label>-->
-            <span class="bg bg-warning">
+                <div>
+                 <br class="form-floating">
+                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                   <label class="form-check-label" for="flexRadioDefault1">Patient</label>
+                 </br>
+                 <br class="form-floating">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">Doctor</label>
+                </br>
+               </div>
+    <span class="bg bg-warning">
                 <?php echo $data['userTypeError']; ?>
             </span>
-        </div>
-
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
+            <br>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
+         </br>
+         <br>
         <p class="mt-3">Have an account?<a href="<?php echo URLROOT;?>/users/login" > Login!</a></p>
         <p class="mt-5 mb-3 text-muted">&copy; <?php echo date('Y')?></p>
+    </br>
+
+</div>
     </form>
 </main>
 
