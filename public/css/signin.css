@@ -1,4 +1,8 @@
-
+body{
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
@@ -13,13 +17,7 @@
     }
 }
 
-/*form{*/
-/*    width: 50%;*/
-/*    margin: 0 auto;*/
-/*}*/
-/*form div{*/
-/*    margin: 1rem 0 1rem 0;*/
-/*}*/
+
 
 
 

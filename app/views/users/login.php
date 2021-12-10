@@ -6,21 +6,17 @@
     <!-- Custom styles for this template -->
     <link href=" <?php echo URLROOT ?>/css/signin.css" rel="stylesheet">
 
-<body class="text-center container">
+<body class="text-center container d-flex">
 
 <main class="form-signin w-md-100">
     <form action="<?php echo URLROOT; ?>/users/login" method="POST">
         <img class="mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="Online daktari" width="72" height="57">
         <h1 class="h3 mb-3 fw-normal">Log in</h1>
         <small class="text-warning">Fields marked with * are required.</small>
-        <div class="form-floating">
-            
+        <div class="form-floating mb-3">
             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email">
             <label for="floatingInput">Email address *</label>
-    </div>
-  </div>
-
-            <span class="bg bg-warning">
+              <span class="bg bg-warning">
                  <?php echo $data['emailError']; ?>
             </span>
         </div>
