@@ -37,7 +37,7 @@ class Users extends Controller
                 'email' => trim($_POST['email']),
                 'password' => trim($_POST['password']),
                 'confirmPassword' => trim($_POST['confirmPassword']),
-                 'userType' => trim($_POST ['userType']),
+                'userType' => trim($_POST['userType']),
                 'firstNameError' => '',
                 'lastNameError' => '',
                 'emailError' => '',
@@ -69,7 +69,7 @@ class Users extends Controller
                 $data['emailError'] = 'Please enter the correct email format.';
             }else{
                 //Check if email exists
-                if ($this->userModel->findUserEmail($data['email'])){
+                if (!$this->userModel->findUserEmail($data['email'])){
                     $data['emailError'] = 'Email is already registered.';
                 }
             }
@@ -77,7 +77,7 @@ class Users extends Controller
             //Validate password on length and numeric values
             if (empty($data['password'])){
                 $data['passwordError'] = 'Please enter password.';
-            }elseif (strlen($data['password'] > 8)){
+            }elseif (strlen($data['password'] < 8)){
                 $data['passwordError'] = 'Password must be at least 8 characters long.';
             }elseif (preg_match($passwordValidation, $data['password'])){
                 $data['passwordError'] = 'Password must have at least 1 numeric value or letter.';

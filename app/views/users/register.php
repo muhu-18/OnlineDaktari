@@ -81,11 +81,11 @@ require APPROOT.'/views/includes/header.php';
         </div>
                 <div>
                  <br class="form-floating">
-                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                   <label class="form-check-label" for="flexRadioDefault1">Patient</label>
+                 <input class="form-check-input" type="radio" name="userType" id="flexRadioDefault1">
+                   <label class="form-check-label" for= "flexRadioDefault1">Patient</label>
                  </br>
                  <br class="form-floating">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <input class="form-check-input" type="radio" name="userType" id="flexRadioDefault2" checked>
                 <label class="form-check-label" for="flexRadioDefault2">Doctor</label>
                 </br>
                </div>
