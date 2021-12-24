@@ -2,8 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99ba2fb4-6bfc-48a7-8aed-df99ddc7bb21" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/d261693c-3df7-4151-a849-dee3a7282162.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/d261693c-3df7-4151-a849-dee3a7282162/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/d261693c-3df7-4151-a849-dee3a7282162/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/d261693c-3df7-4151-a849-dee3a7282162/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/Admins.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/Doctors.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/Maps.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/Patients.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/Admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/Doctor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/Map.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/Page.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/Patient.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/pages/contact.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/pages/doctors.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/pages/services.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/users/doctor/profile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/users/patients/profile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Pages.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Pages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/includes/navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/includes/navigation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pages/doctorList.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pages/doctorProfile.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +52,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
