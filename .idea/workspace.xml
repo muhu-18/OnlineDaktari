@@ -1,31 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99ba2fb4-6bfc-48a7-8aed-df99ddc7bb21" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/d261693c-3df7-4151-a849-dee3a7282162.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/d261693c-3df7-4151-a849-dee3a7282162/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/d261693c-3df7-4151-a849-dee3a7282162/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/d261693c-3df7-4151-a849-dee3a7282162/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/Admins.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/Doctors.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/Maps.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/Patients.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/Admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/Doctor.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/Map.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/Page.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/Patient.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/pages/contact.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/pages/doctors.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/pages/services.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/users/doctor/profile.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/users/patients/profile.php" afterDir="false" />
+    <list default="true" id="99ba2fb4-6bfc-48a7-8aed-df99ddc7bb21" name="Changes" comment="Added fix">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d261693c-3df7-4151-a849-dee3a7282162.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d261693c-3df7-4151-a849-dee3a7282162.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Pages.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Pages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/includes/navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/includes/navigation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/doctorList.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/doctorProfile.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pages/doctors.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/doctors.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +37,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect" value="MySQL" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -71,7 +53,17 @@
       <workItem from="1638696959657" duration="92000" />
       <workItem from="1638697109054" duration="50113000" />
       <workItem from="1639049904161" duration="361000" />
+      <workItem from="1640351995056" duration="3830000" />
+      <workItem from="1640435975852" duration="6028000" />
     </task>
+    <task id="LOCAL-00001" summary="Added fix">
+      <created>1640352362665</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1640352362665</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -88,5 +80,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added fix" />
   </component>
 </project>

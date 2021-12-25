@@ -8,5 +8,4 @@
         <div class="col-sm">col-sm</div>
         <div class="col-sm">col-sm</div>
     </div>
-
 </div>

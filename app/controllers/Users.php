@@ -93,14 +93,25 @@ class Users extends Controller
                 if(empty($data['firstNameError']) && empty($data['lastNameError']) && empty($data['emailError']) && empty($data['passwordError']) && empty($data['confirmPasswordError'])){
                     //Hash passwords
                     $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
-
-                    //Register user form model function
-                    if ($this->userModel->register($data)){
-                        //Redirect the user to login page
-                        header('location: '.URLROOT.'/users/login');
+                    //Register userlogin from model function
+                    if ($this->userModel->insertLogins($data['email'], $data['password'])){
+                        //Register user form model function
+                        if ($this->userModel->insertUserLocation($data['latitude'], $data['longitude'], $data['country'])){
+                            //Register user location form model function
+                            if ($this->userModel->register($data)){
+                                //Redirect the user to login page
+                                header('location: '.URLROOT.'/users/login');
+                            }else{
+                                die(('Something went wrong!'));
+                            }
+                        }else{
+                            die(('Something went wrong!'));
+                        }
                     }else{
                         die(('Something went wrong!'));
                     }
+
+
                 }
             }
         }

@@ -7,9 +7,38 @@ class User{
         $this->db = new Database;
     }
 
+    public function insertLogins()
+    {
+        $this->db->query('INSERT INTO userlogin (username, password) VALUES(:username, :password)');
+        //Bind values
+        $this->db->bind(':username', $data['email']);
+        $this->db->bind(':password', $data['password']);
+        //execute the function
+        if($this->db->execute()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public function insertUserLocation($latitude, $longitude, $country)
+    {
+        $this->db->query('INSERT INTO locations (latitude, longitude, country, last_updated) VALUES(:latitude, :longitude, :country, CURDATE())');
+        //Bind values
+        $this->db->bind(':latitude', $latitude);
+        $this->db->bind(':longitude', $longitude);
+        $this->db->bind(':country', $country);
+        //execute the function
+        if($this->db->execute()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     public function register($data)
     {
-        $this->db->query('INSERT INTO users (firstName, lastName, email, password, userType) VALUES(:firstName, :lastName, :email, :password, :userType)');
+        $this->db->query('INSERT INTO users (first_name, last_name, phone, email, last_updated, userlogin_userlogin_id, location_location_id) VALUES(:firstName, :lastName, :email, :password, :userType,  LAST_INSERT_ID(), LAST_INSERT_ID())');
        //Bind values
         $this->db->bind(':firstName', $data['firstName']);
         $this->db->bind(':lastName', $data['lastName']);
@@ -45,11 +74,10 @@ class User{
     public function findUserEmail($email)
     {
         //Prepared statement
-        $this->db->query('SELECT * FROM users WHERE $email = :email');
+        $this->db->query('SELECT * FROM userlogin WHERE username = :username');
 
         //bind email param
-        $this->db->bind(':email', $email);
-
+        $this->db->bind(':username', $email);
         //Check if email is already registered
         if ($this->db->rowCount() > 0){
             return false;
