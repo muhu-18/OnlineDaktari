@@ -1,0 +1,32 @@
+.form-signin{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+main{
+    line-height: 2rem;
+}
+
+
+input[type='checkbox']{
+    display: inline-block;
+    width: 1rem;
+}
+
+label{
+    font-size: 1.2rem;
+    text-align: left !important;
+}
+
+button{
+    display: inline-block;
+    width: 25rem;
+}
+
+.bg-warning{
+    background-color: goldenrod;
+}

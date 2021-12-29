@@ -11,7 +11,7 @@
         </li>
           <?php if(isset($_SESSION['user_id'])) : ?>
         <li class="nav-item">
-          <a class="nav-link" href="<?php echo URLROOT; ?>/pages/notifications">Notifications</a>
+          <a class="nav-link" href="<?php echo URLROOT; ?>/pages/notifications"> <i class="bi bi-bell-fill"></i>Notifications</a>
         </li>
 
         <li class="nav-item">

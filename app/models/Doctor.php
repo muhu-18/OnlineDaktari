@@ -13,7 +13,7 @@ class Doctor
      */
     public function getDoctors()
     {
-        $this->db->query('SELECT * FROM doctors');
+        $this->db->query('SELECT * FROM users WHERE role_id=0');
 
         return $this->db->resultSet();
     }
