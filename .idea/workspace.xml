@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99ba2fb4-6bfc-48a7-8aed-df99ddc7bb21" name="Changes" comment="integrated paypal payment">
-      <change afterPath="$PROJECT_DIR$/app/views/pages/appointments.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Pages.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Pages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/cancel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/cancel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/checkout.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/checkout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/schedule.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/schedule.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/success.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/success.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +55,7 @@
       <workItem from="1640611264587" duration="1613000" />
       <workItem from="1640757020926" duration="22787000" />
       <workItem from="1640848035406" duration="80000" />
-      <workItem from="1640848185014" duration="29922000" />
+      <workItem from="1640848185014" duration="31245000" />
     </task>
     <task id="LOCAL-00001" summary="Added fix">
       <created>1640352362665</created>
