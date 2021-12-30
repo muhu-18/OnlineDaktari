@@ -49,6 +49,13 @@ require_once APPROOT."/views/includes/header.php";
                 </tr>
                 </tbody>
             </table>
+            <div>
+                <h5>Mode of Communication</h5>
+                <ul class="list-unstyled d-flex justify-content-around">
+                    <li><input  type="radio" value="video" name="mode" checked>Video</li>
+                    <li><input  type="radio" value="chat" name="mode">Chat</li>
+                </ul>
+            </div>
         </div>
     </div>
 

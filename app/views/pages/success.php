@@ -17,7 +17,7 @@
 
     <div class="site-title text-center">
         <div><img src="<?php echo URLROOT;?>/public/images/checked.png" style="width: 15rem" alt=""></div>
-        <h1 class="font-title">Payment Done Successfully...!</h1>
+        <h1 class="font-title">Payment Done Successfully...! Your Appointment has been Booked</h1>
     </div>
     <?php
 //    sleep(15);

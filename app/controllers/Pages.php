@@ -62,4 +62,14 @@ class Pages extends Controller{
     {
         $this->view('pages/cancel');
     }
+
+    public function appointments()
+    {
+        $this->view('pages/appointments');
+    }
+
+    public function video()
+    {
+        $this->view('pages/video');
+    }
 }

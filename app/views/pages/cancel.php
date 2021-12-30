@@ -16,7 +16,7 @@
 
     <div class="site-title text-center" >
         <div><img src="<?php echo URLROOT;?>/public/images/cancel.png" style="width: 15rem"  alt=""></div>
-        <h1 class="font-title">Payment Cancelled For Some Reason. The appointment has not been booked!</h1>
+        <h1 class="font-title">Payment Cancelled For Some Reason.The appointment has been booked nevertheless!</h1>
     </div>
 <?php
 //sleep(15);

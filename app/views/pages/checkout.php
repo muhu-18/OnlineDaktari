@@ -56,7 +56,7 @@ require_once APPROOT."/views/includes/header.php";
                     <div class="row g-3">
                         <div class="col-sm-6">
                             <label for="firstName" class="form-label">First name</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                            <input type="text" class="form-control" id="firstName" placeholder="" value="<?php echo $_SESSION['firstName']?>" disabled required>
                             <div class="invalid-feedback">
                                 Valid first name is required.
                             </div>
@@ -64,7 +64,7 @@ require_once APPROOT."/views/includes/header.php";
 
                         <div class="col-sm-6">
                             <label for="lastName" class="form-label">Last name</label>
-                            <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                            <input type="text" class="form-control" id="lastName" placeholder="" value="<?php echo $_SESSION['firstName']?>" disabled required>
                             <div class="invalid-feedback">
                                 Valid last name is required.
                             </div>
@@ -74,7 +74,7 @@ require_once APPROOT."/views/includes/header.php";
                             <label for="username" class="form-label">Username</label>
                             <div class="input-group has-validation">
                                 <span class="input-group-text">@</span>
-                                <input type="text" class="form-control" id="username" placeholder="Username" required>
+                                <input type="text" class="form-control" id="username" placeholder="Username" value="<?php echo $_SESSION['firstName']?>" disabled required>
                                 <div class="invalid-feedback">
                                     Your username is required.
                                 </div>
