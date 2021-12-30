@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="99ba2fb4-6bfc-48a7-8aed-df99ddc7bb21" name="Changes" comment="integrated paypal payment">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+=======
     <list default="true" id="99ba2fb4-6bfc-48a7-8aed-df99ddc7bb21" name="Changes" comment="" />
+>>>>>>> main
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,10 +33,15 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect" value="MySQL" />
+=======
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/views/users/patients" />
+>>>>>>> main
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -52,11 +63,57 @@
       <workItem from="1638696959657" duration="92000" />
       <workItem from="1638697109054" duration="50113000" />
       <workItem from="1639049904161" duration="361000" />
+<<<<<<< HEAD
+      <workItem from="1640351995056" duration="3830000" />
+      <workItem from="1640435975852" duration="6752000" />
+      <workItem from="1640592592664" duration="11226000" />
+      <workItem from="1640611264587" duration="1613000" />
+      <workItem from="1640757020926" duration="22787000" />
+      <workItem from="1640848035406" duration="80000" />
+      <workItem from="1640848185014" duration="31245000" />
+=======
       <workItem from="1639125077853" duration="4301000" />
       <workItem from="1639750260061" duration="6266000" />
       <workItem from="1640074876294" duration="2641000" />
       <workItem from="1640258590081" duration="3228000" />
+>>>>>>> main
     </task>
+    <task id="LOCAL-00001" summary="Added fix">
+      <created>1640352362665</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1640352362665</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added fix">
+      <created>1640444562185</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1640444562185</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added doctors page">
+      <created>1640773124477</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1640773124477</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added datepicker">
+      <created>1640863966382</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1640863966382</updated>
+    </task>
+    <task id="LOCAL-00005" summary="integrated paypal payment">
+      <created>1640875595751</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1640875595751</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -73,5 +130,12 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added fix" />
+    <MESSAGE value="added doctors page" />
+    <MESSAGE value="added datepicker" />
+    <MESSAGE value="integrated paypal payment" />
+    <option name="LAST_COMMIT_MESSAGE" value="integrated paypal payment" />
   </component>
 </project>

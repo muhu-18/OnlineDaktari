@@ -2,7 +2,8 @@
 class Pages extends Controller{
     public function __construct()
     {
-//        $this->pageModel = $this->model('Page');
+        $this->pageModel = $this->model('Page');
+        $this->doctorModel = $this->model('Doctor');
     }
     public function index(){
         $data = [
@@ -13,14 +14,16 @@ class Pages extends Controller{
 
     public function about(){
         $data = [
-            'title' => 'Home Page'
+            'title' => 'About Page'
         ];
         $this->view('pages/about', $data);
     }
 
     public function doctors(){
+        $doctors = $this->doctorModel->getDoctors();
         $data = [
-            'title' => 'Home'
+            'title' => 'Doctors',
+            'doctors' => $doctors
         ];
         $this->view('pages/doctors', $data);
     }
@@ -30,7 +33,7 @@ class Pages extends Controller{
         $data = [
             'title' => 'Services'
         ];
-        $this->view('pages/doctors', $data);
+        $this->view('pages/services', $data);
     }
 
     public function contact(){
@@ -38,5 +41,35 @@ class Pages extends Controller{
             'title' => 'Contact'
         ];
         $this->view('pages/contact', $data);
+    }
+
+    public function schedule()
+    {
+        $this->view('pages/schedule');
+    }
+
+    public function checkout()
+    {
+        $this->view('pages/checkout');
+    }
+
+    public function success()
+    {
+        $this->view('pages/success');
+    }
+
+    public function cancel()
+    {
+        $this->view('pages/cancel');
+    }
+
+    public function appointments()
+    {
+        $this->view('pages/appointments');
+    }
+
+    public function video()
+    {
+        $this->view('pages/video');
     }
 }

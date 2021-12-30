@@ -40,9 +40,8 @@ require APPROOT.'/views/includes/header.php';
     </style>
 
 
-</head>
-<body>
-
+  </head>
+  <body>
 <main>
     <div class="container py-4">
 

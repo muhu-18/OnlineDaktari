@@ -13,14 +13,18 @@ class Users extends Controller
             'username' => '',
             'firstName' => '',
             'lastName' => '',
+            'phone' => '',
             'email' => '',
             'password' => '',
             'confirmPassword' => '',
+            'latitude' => '',
+            'longitude' => '',
             'userType' => '',
             'usernameError' => '',
             'firstNameError' => '',
             'lastNameError' => '',
             'emailError' => '',
+            'phoneError' => '',
             'passwordError' => '',
             'confirmPasswordError' => '',
             'userTypeError' => ''
@@ -35,12 +39,16 @@ class Users extends Controller
                 'firstName' => trim($_POST['firstName']),
                 'lastName' => trim($_POST['lastName']),
                 'email' => trim($_POST['email']),
+                'phone' => trim($_POST['phone']),
                 'password' => trim($_POST['password']),
                 'confirmPassword' => trim($_POST['confirmPassword']),
-                 'userType' => trim($_POST ['userType']),
+                'userType' => trim($_POST['usertype']),
+                'latitude' => trim($_POST['lat']),
+                'longitude' => trim($_POST['long']),
                 'firstNameError' => '',
                 'lastNameError' => '',
                 'emailError' => '',
+                'phoneError' => '',
                 'passwordError' => '',
                 'confirmPasswordError' => '',
                 'userTypeError' => ''
@@ -74,6 +82,10 @@ class Users extends Controller
                 }
             }
 
+            if (empty($data['phone'])){
+                $data['phoneError'] = 'Please enter a phone number.';
+            }
+
             //Validate password on length and numeric values
             if (empty($data['password'])){
                 $data['passwordError'] = 'Please enter password.';
@@ -93,14 +105,25 @@ class Users extends Controller
                 if(empty($data['firstNameError']) && empty($data['lastNameError']) && empty($data['emailError']) && empty($data['passwordError']) && empty($data['confirmPasswordError'])){
                     //Hash passwords
                     $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
-
-                    //Register user form model function
-                    if ($this->userModel->register($data)){
-                        //Redirect the user to login page
-                        header('location: '.URLROOT.'/users/login');
+                    //Register userlogin from model function
+                    if ($this->userModel->insertLogins($data['email'], $data['password'])){
+                        //Register user form model function
+                        if ($this->userModel->insertUserLocation($data)){
+                            //Register user location form model function
+                            if ($this->userModel->register($data)){
+                                //Redirect the user to login page
+                                header('location: '.URLROOT.'/users/login');
+                            }else{
+                                die(('Something went wrong!'));
+                            }
+                        }else{
+                            die(('Something went wrong!'));
+                        }
                     }else{
                         die(('Something went wrong!'));
                     }
+
+
                 }
             }
         }
@@ -161,9 +184,9 @@ class Users extends Controller
     }
 
     public function createUserSession($user) {
-        $_SESSION['user_id'] = $user->id;
+        $_SESSION['user_id'] = $user->user_id;
         $_SESSION['email'] = $user->email;
-        $_SESSION['first_name'] = $user->firstName;
+        $_SESSION['firstName'] = $user->first_name;
         header('location:' . URLROOT . '/pages/index');
     }
 
