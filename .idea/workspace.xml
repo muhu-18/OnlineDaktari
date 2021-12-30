@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99ba2fb4-6bfc-48a7-8aed-df99ddc7bb21" name="Changes" comment="added doctors page">
-      <change afterPath="$PROJECT_DIR$/app/views/pages/schedule.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d261693c-3df7-4151-a849-dee3a7282162.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d261693c-3df7-4151-a849-dee3a7282162.xml" afterDir="false" />
+    <list default="true" id="99ba2fb4-6bfc-48a7-8aed-df99ddc7bb21" name="Changes" comment="added datepicker">
+      <change afterPath="$PROJECT_DIR$/app/views/pages/cancel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/pages/checkout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/pages/success.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/response.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Pages.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Pages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/doctors.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/doctors.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +60,7 @@
       <workItem from="1640611264587" duration="1613000" />
       <workItem from="1640757020926" duration="22787000" />
       <workItem from="1640848035406" duration="80000" />
-      <workItem from="1640848185014" duration="15507000" />
+      <workItem from="1640848185014" duration="26137000" />
     </task>
     <task id="LOCAL-00001" summary="Added fix">
       <created>1640352362665</created>
@@ -82,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640773124477</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added datepicker">
+      <created>1640863966382</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1640863966382</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,6 +111,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added fix" />
     <MESSAGE value="added doctors page" />
-    <option name="LAST_COMMIT_MESSAGE" value="added doctors page" />
+    <MESSAGE value="added datepicker" />
+    <option name="LAST_COMMIT_MESSAGE" value="added datepicker" />
   </component>
 </project>

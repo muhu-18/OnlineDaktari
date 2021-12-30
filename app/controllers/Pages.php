@@ -47,4 +47,19 @@ class Pages extends Controller{
     {
         $this->view('pages/schedule');
     }
+
+    public function checkout()
+    {
+        $this->view('pages/checkout');
+    }
+
+    public function success()
+    {
+        $this->view('pages/success');
+    }
+
+    public function cancel()
+    {
+        $this->view('pages/cancel');
+    }
 }
