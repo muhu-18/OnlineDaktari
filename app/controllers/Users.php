@@ -89,10 +89,10 @@ class Users extends Controller
             //Validate password on length and numeric values
             if (empty($data['password'])){
                 $data['passwordError'] = 'Please enter password.';
-            }elseif (strlen($data['password'] < 8)){
+            }elseif (strlen($data['password']) < 8){
                 $data['passwordError'] = 'Password must be at least 8 characters long.';
             }elseif (preg_match($passwordValidation, $data['password'])){
-                $data['passwordError'] = 'Password must have at least 1 numeric value.';
+                $data['passwordError'] = 'Password must have at least 1 numeric value or letter.';
             }
             //Validate confirm password
             if (empty($data['confirmPassword'])){
@@ -193,7 +193,7 @@ class Users extends Controller
     public function logout() {
         unset($_SESSION['user_id']);
         unset($_SESSION['email']);
-        unset($_SESSION['firstName']);
+        unset($_SESSION['first_name']);
         header('location:' . URLROOT . '/users/login');
     }
 

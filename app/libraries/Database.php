@@ -23,9 +23,7 @@ class Database{
             $this->error = $e->getMessage();
             echo $this->error;
         }
-
     }
-
     // method to allow writing of queries
     public function query($sql){
         $this->statement = $this->dbHandler->prepare($sql);
@@ -33,20 +31,12 @@ class Database{
 
     // Bind values
     public function bind($parameter, $value, $type = null){
-        switch (is_null($type)) {
-            case is_int($value):
-                $type = PDO::PARAM_INT;
-                break;
-            case is_bool($value):
-                $type = PDO::PARAM_BOOL;
-                break;
-            case is_null($value):
-                $type = PDO::PARAM_NULL;
-                break;
-            
-            default:
-                $type = PDO::PARAM_STR;                
-        }
+        $type = match (is_null($type)) {
+            is_int($value) => PDO::PARAM_INT,
+            is_bool($value) => PDO::PARAM_BOOL,
+            is_null($value) => PDO::PARAM_NULL,
+            default => PDO::PARAM_STR,
+        };
         $this->statement->bindValue($parameter, $value, $type);
     }
     // execute the prepared statement

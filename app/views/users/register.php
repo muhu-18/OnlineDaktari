@@ -54,6 +54,9 @@ require APPROOT.'/views/includes/header.php';
                  <?php echo $data['passwordError']; ?>
              </span>
         </div>
+        <div class="mt-3 mb-3">
+            <input class="form-check-input mr-5" type="radio" name="userType" id="patient" value="patient">
+            <label class="form-check-label" for="patient">Patient</label>
 
         <div class="form-item mb-3">
             <label for="confirmPassword">Confirm Password*</label>
@@ -79,6 +82,9 @@ require APPROOT.'/views/includes/header.php';
         <button class="w-100 btn btn-lg btn-primary button-green" type="submit">Sign Up</button>
         <p class="mt-3">Already registered?<a href="<?php echo URLROOT;?>/users/login" > Login!</a></p>
         <p class="mt-5 mb-3 text-muted">&copy; <?php echo date('Y')?></p>
+    </br>
+
+
     </form>
 </main>
 <div class="col">
