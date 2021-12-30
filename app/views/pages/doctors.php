@@ -27,7 +27,7 @@
 
                     <span>Consultation Fee: Ksh. 350</span>
 
-                    <button class="btn btn-lg btn-primary bg-success">Book Now</button>
+                    <a href="<?php echo URLROOT;?>/pages/schedule" class="btn btn-lg btn-primary bg-success">Book Now</a>
             </div>
         </div>
     </div>

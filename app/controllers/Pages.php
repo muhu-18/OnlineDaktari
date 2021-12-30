@@ -42,4 +42,9 @@ class Pages extends Controller{
         ];
         $this->view('pages/contact', $data);
     }
+
+    public function schedule()
+    {
+        $this->view('pages/schedule');
+    }
 }
