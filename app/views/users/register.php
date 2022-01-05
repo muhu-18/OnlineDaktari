@@ -1,83 +1,50 @@
 <?php
 require APPROOT.'/views/includes/header.php';
+
 ?>
-
-
-
-<!doctype html>
-<html lang="en">
 <head>
-
-
-
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg  {
-                font-size: 3.5rem;
-                
-            }
-        }
-    </style>
-
-
-    <!-- Custom styles for this template -->
-    <link href="signin.css" rel="stylesheet">
+<!--    <link rel="stylesheet" href="--><?php //echo URLROOT; ?><!--/public/css/login.css">-->
 </head>
-<body class="text-center">
 
-<main class="form-signin container">
-    <form  action="<?php echo URLROOT; ?>/users/register" method="POST">
-        <img class="mb-4" src="" alt="Online daktari" width="72" height="57">
-        <h1 class="h3 mb-3 fw-normal"> Registration </h1>
-        <small class="text-warning">Fields marked with * are required.</small>
-       
+<body class="container mt-5">
+<div class="row">
+<main class="form-signin w-md-100 col">
+    <form action="<?php echo URLROOT; ?>/users/register" method="POST">
+<!--        <div>-->
+<!--            <img class="mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="eWaste logo" width="72" height="57">-->
+<!--            <small class="text-warning" style="display: block">Fields marked with * are required.</small>-->
+<!--        </div>-->
 
-        <div class="form-floating">
-            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="firstName">
-            <label for="floatingInput">First Name *</label>
+        <div class="form-item mb-3">
+            <label for="firstName">First Name*</label>
+            <input type="text" class="form-control" id="firstName" placeholder="John" name="firstName">
             <span class="bg bg-warning">
                  <?php echo $data['firstNameError']; ?>
-            </span>
+             </span>
         </div>
 
-        <div class="form-floating">
-            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="lastName">
-            <label for="floatingInput">Last Name *</label>
+        <div class="form-item mb-3">
+            <label for="lastName">Last Name*</label>
+            <input type="text" class="form-control" id="lastName" placeholder="Doe" name="lastName">
             <span class="bg bg-warning">
                  <?php echo $data['lastNameError']; ?>
-            </span>
+             </span>
         </div>
 
-        <div class="form-floating">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email">
-            <label for="floatingInput">Email address *</label>
-            <form class="form-floating">
+        <div class="form-item mb-3">
+            <label for="email">Email address*</label>
+            <input type="email" class="form-control" id="email" placeholder="john@doe.com" name="email">
             <span class="bg bg-warning">
                  <?php echo $data['emailError']; ?>
-            </span>
-        </div>
-        <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
-            <label for="floatingPassword">Password *</label>
-            <span class="bg bg-warning">
-                <?php echo $data['passwordError']; ?>
-            </span>
+             </span>
         </div>
 
-        <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Confirm Password" name="confirmPassword">
-            <label for="floatingPassword">Confirm Password *</label>
+        <div class="form-item mb-3">
+            <label for="tel">Phone*</label>
+            <input type="tel" class="form-control" id="tel" placeholder="0797165741" name="phone">
             <span class="bg bg-warning">
-                <?php echo $data['confirmPasswordError']; ?>
-            </span>
+                 <?php echo $data['phoneError']; ?>
+             </span>
         </div>
                 <div>
                  <br class="form-floating">
@@ -100,10 +67,17 @@ require APPROOT.'/views/includes/header.php';
         <p class="mt-5 mb-3 text-muted">&copy; <?php echo date('Y')?></p>
     </br>
 
-</div>
+
     </form>
 </main>
+<div class="col">
+    <div id="map" style="height: 30rem"></div>
+</div>
+
+</div>
+
+<?php
+require APPROOT.'/views/includes/gmap.php';
+?>
+
 </body>
-</html>
-
-

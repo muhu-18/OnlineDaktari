@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="<?php echo URLROOT; ?>/pages/index">LOGO</a>
@@ -11,26 +12,27 @@
         </li>
           <?php if(isset($_SESSION['user_id'])) : ?>
         <li class="nav-item">
-          <a class="nav-link" href="<?php echo URLROOT; ?>/pages/profile">Profile</a>
+          <a class="nav-link" href="<?php echo URLROOT; ?>/pages/notifications"> <i class="bi bi-bell-fill"></i>Notifications</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="<?php echo URLROOT; ?>/pages/notifications">Notifications</a>
-        </li>       
-  
+
         <li class="nav-item">
           <a class="nav-link" href="<?php echo URLROOT; ?>/pages/appointments">Appointments</a>
         </li>
-       
-       
+        <li class="nav-item">
+            <a class="nav-link" href="<?php echo URLROOT; ?>/pages/doctors">Doctors</a>
+        </li>
+
+
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            Settings
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">            
             <li><a class="dropdown-item" href="<?php echo URLROOT; ?>/pages/payment">Payment</a></li>
+            <li><a class="dropdown-item"  href="<?php echo URLROOT; ?>/pages/wallet">Profile</a></li>
             <li><a class="dropdown-item"  href="<?php echo URLROOT; ?>/pages/wallet">Wallet</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="<?php echo URLROOT; ?>/users/settings">Settings</a></li>
+            <li><a class="dropdown-item" href="<?php echo URLROOT; ?>/users/settings">Logout</a></li>
           </ul>
         </li>
           <?php endif; ?>
